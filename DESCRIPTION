@@ -1,0 +1,17 @@
+Package: BOUTH
+Type: Package
+Title: Bottom-up Tree Hypothesis Tests
+Version: 0.1.0
+Author: Yunxiao Li, Yi-Juan Hu and Glen A. Satten
+Maintainer: Yunxiao Li <yunxiao.li@emory.edu>
+Description: Testing hypotheses that have a branching tree dependence structure in a bottom-up manner, with false discovery rate control
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.0.9000
+Depends: R (>= 2.1.0)
+Imports: dplyr(>= 0.7.0), RColorBrewer(>= 1.1-2)
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
+NeedsCompilation: no
+Packaged: 2018-11-05 15:28:23 UTC; yil
