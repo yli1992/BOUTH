@@ -144,17 +144,19 @@
 
     while(this <= n.node){
       parent = tree@node$parent[this]
-      if(!parent %in% hash.id){
+      if(parent <= n.node & !parent %in% hash.id){
         hash.id =  c(hash.id, parent)
       }
       hash.id = hash.id[-1]
+      if(length(hash.id)==0){
+        break
+      }
       if(parent <= n.node){
         subtree[[parent]] = c(subtree[[parent]], this)
-        this = hash.id[1]
-      }else{
-        break;
       }
+      this = hash.id[1]
     }
+    subtree = lapply(subtree, unique)
 
     ## compute least favorable weights
     LFW<-vector("list",n.node); LFW[hash.xid] = 1
